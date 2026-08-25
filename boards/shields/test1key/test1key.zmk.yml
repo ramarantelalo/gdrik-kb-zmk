@@ -1,0 +1,10 @@
+file_format: "1"
+id: test1key
+name: Test1Key
+type: shield
+url: https://example.com
+requires: [nice_nano_v2]
+features:
+  - keys
+siblings:
+  - test1key
