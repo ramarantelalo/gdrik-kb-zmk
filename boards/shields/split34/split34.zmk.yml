@@ -1,10 +1,12 @@
 file_format: "1"
-id: test1key
-name: Test1Key
+id: split34
+name: Split34
 type: shield
 url: https://example.com
 requires: [nice_nano_v2]
 features:
   - keys
+  - bluetooth
 siblings:
-  - test1key
+  - split34_left
+  - split34_right
