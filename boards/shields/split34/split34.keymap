@@ -1,16 +1,47 @@
 #include <dt-bindings/zmk/keys.h>
 #include <behaviors.dtsi>
+#include "zmk-helpers/helper.h"
+#include "split34-labels.h"
+
+ZMK_HOLD_TAP(hml,
+    flavor = "balanced";
+    tapping-term-ms = <225>;
+    quick-tap-ms = <175>;
+    require-prior-idle-ms = <130>;
+    hold-trigger-on-release;
+    hold-trigger-key-positions = <RIGHT_HAND_KEYS>;
+    bindings = <&kp>, <&kp>;
+)
+
+ZMK_HOLD_TAP(hmr,
+    flavor = "balanced";
+    tapping-term-ms = <225>;
+    quick-tap-ms = <175>;
+    require-prior-idle-ms = <130>;
+    hold-trigger-on-release;
+    hold-trigger-key-positions = <LEFT_HAND_KEYS>;
+    bindings = <&kp>, <&kp>;
+)
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = < 
-                &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y  &kp U  &kp I     &kp O   &kp P
-                &kp A  &kp S  &kp D  &kp F  &kp G        &kp H  &kp J  &kp K     &kp L   &kp ESC
-                &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N  &kp M  &kp COMMA &kp DOT &kp TAB
-                                     &studio_unlock  &kp SPACE    &kp SPACE &none
+            bindings = 
+                &kp Q          &kp W          &kp E          &kp R          &kp T            &kp Y  &kp U          &kp I           &kp O           &kp P
+                &hml LGUI A    &hml LSHFT S   &hml LCTRL D   &lt 1 F        &hml LALT G      &kp H  &hmr RSHFT J   &hmr RCTRL K    &hmr RALT L     &hmr RGUI ESC
+                &kp Z          &kp X          &kp C          &kp V          &kp B            &kp N  &kp M          &kp COMMA       &kp DOT         &kp TAB
+                                                              &studio_unlock &kp SPACE          &kp SPACE &none
+            >;
+        };
+
+        sym_layer {
+            bindings = 
+                &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+                                                 &trans  &trans      &trans  &trans
             >;
         };
     };
