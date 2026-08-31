@@ -1,4 +1,6 @@
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/bt.h>
 #include <behaviors.dtsi>
 #include "zmk-helpers/helper.h"
 #include "split34-labels.h"
@@ -34,37 +36,37 @@ ZMK_HOLD_TAP(hmr,
 
         default_layer {
             bindings = <
-                &kp Q          &kp W          &kp E          &kp R          &kp T            &kp Y  &kp U          &kp I           &kp O           &kp P
-                &hml LGUI A    &hml LSHFT S   &hml LCTRL D   &lt SYM F      &hml LALT G      &hmr RALT H  &lt SYM J   &hmr RCTRL K    &hmr RSHFT L     &hmr RGUI ESC
-                &kp Z          &kp X          &kp C          &kp V          &kp B            &kp N  &kp M          &kp COMMA       &kp DOT         &kp TAB
-                                                              &studio_unlock &lt NAV SPACE          &lt NAV SPACE &none
+                &kp Q          &kp W          &kp E         &kp R           &kp T                 &kp Y           &kp U       &kp I         &kp O         &kp P
+                &hml LGUI A    &hml LSHFT S   &hml LCTRL D  &lt SYM F       &hml LALT G           &hmr RALT H     &lt SYM J   &hmr RCTRL K  &hmr RSHFT L  &hmr RGUI ESC
+                &kp Z          &kp X          &kp C         &kp V           &kp B                 &kp N           &kp M       &kp COMMA     &kp DOT       &kp TAB
+                                                            &studio_unlock  &lt NAV SPACE         &lt NAV SPACE   &none
             >;
         };
 
         sym_layer {
             bindings = <
-                &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp PIPE   &kp BSLH
-                &kp EQUAL  &kp LT     &kp LBRC   &kp LPAR   &kp LBKT       &kp GRAVE  &kp SEMI   &kp FSLH   &kp SQT    &kp MINUS
-                &kp PLUS   &kp GT     &kp RBRC   &kp RPAR   &kp RBKT       &kp TILDE  &kp COLON  &kp QMARK  &kp DQT    &kp UNDER
-                                                  &trans     &mo FKEYS         &mo FKEYS  &trans
+                &kp EXCL   &kp AT   &kp HASH  &kp DLLR    &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp PIPE   &kp BSLH
+                &kp EQUAL  &kp LT   &kp LBRC  &kp LPAR    &kp LBKT       &kp GRAVE  &kp SEMI   &kp FSLH   &kp SQT    &kp MINUS
+                &kp PLUS   &kp GT   &kp RBRC  &kp RPAR    &kp RBKT       &kp TILDE  &kp COLON  &kp QMARK  &kp DQT    &kp UNDER
+                                              &bt BT_CLR  &mo FKEYS      &mo FKEYS  &bt BT_CLR
             >;
         };
 
         nav_layer {
             bindings = <
-                &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6      &kp N7  &kp N8  &kp N9  &kp N0
-                &trans  &trans  &trans  &trans  &trans      &kp LEFT    &kp DOWN &kp UP &kp RIGHT &kp ESC
-                &kp C_BRI_DEC &kp C_BRI_INC &kp F12 &kp C_VOL_DN &kp C_VOL_UP     &none  &kp F11  &trans  &trans  &trans
-                                            &trans  &kp BSPC      &kp RET  &trans
+                &kp N1          &kp N2          &kp N3  &kp N4        &kp N5                &kp N6    &kp N7    &kp N8  &kp N9      &kp N0
+                &trans          &trans          &trans  &trans        &trans                &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT   &kp ESC
+                &kp C_BRI_DEC   &kp C_BRI_INC   &none   &kp C_VOL_DN  &kp C_VOL_UP          &kp F11   &kp F12   &trans  &trans      &trans
+                                                        &bootloader   &kp BSPC              &kp RET   &bootloader
             >;
         };
 
         fkeys_layer {
             bindings = <
-                &kp F1  &kp F2  &kp F3  &kp F4  &kp F5           &kp LS(F17) &kp F13 &kp F15 &kp F14 &kp LS(F20)
-                &kp F6  &kp F7  &kp F8  &kp F9  &kp F10          &kp F17     &kp F18 &kp F19 &kp F20 &kp F16
-                &trans  &trans  &trans  &kp F16 &trans           &kp LS(F18) &kp F17 &kp F18 &kp F20 &kp LS(F19)
-                                        &trans  &trans               &trans  &trans
+                &kp F1  &kp F2  &kp F3  &kp F4      &kp F5          &msc SCRL_UP    &mkp LCLK       &mkp MCLK       &mkp RCLK       &msc SCRL_LEFT
+                &trans  &trans  &trans  &mkp LCLK   &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &mkp LCLK
+                &kp F6  &kp F7  &kp F8  &kp F9      &kp F10         &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_RIGHT
+                                        &sys_reset  &trans          &trans          &sys_reset
             >;
         };
     };
