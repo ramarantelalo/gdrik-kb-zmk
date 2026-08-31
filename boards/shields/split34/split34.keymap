@@ -5,6 +5,16 @@
 #include "zmk-helpers/helper.h"
 #include "split34-labels.h"
 
+&mmv {
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <1>;
+};
+
+&msc {
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <1>;
+};
+
 #define DEF 0
 #define SYM 1
 #define NAV 2
