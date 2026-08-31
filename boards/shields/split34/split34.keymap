@@ -9,12 +9,12 @@
 #include "split34-labels.h"
 
 &mmv {
-    time-to-max-speed-ms = <600>;
+    time-to-max-speed-ms = <450>;
     acceleration-exponent = <1>;
 };
 
 &msc {
-    time-to-max-speed-ms = <600>;
+    time-to-max-speed-ms = <3000>;
     acceleration-exponent = <1>;
 };
 
