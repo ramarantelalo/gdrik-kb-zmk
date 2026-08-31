@@ -78,9 +78,9 @@ ZMK_HOLD_TAP(hmr,
 
         fkeys_layer {
             bindings = < 
-                &kp F1  &kp F2  &kp F3  &kp F4      &kp F5          &msc MOVE_Y(SCRL_SPEED)   &mkp LCLK       &mkp MCLK       &mkp RCLK         &msc MOVE_X(-SCRL_SPEED)
+                &kp F1  &kp F2  &kp F3  &kp F4      &kp F5          &msc MOVE_Y(-SCRL_SPEED)   &mkp LCLK       &mkp MCLK       &mkp RCLK         &msc MOVE_X(-SCRL_SPEED)
                 &trans  &trans  &trans  &mkp LCLK   &trans          &mmv MOVE_LEFT            &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &mkp LCLK
-                &kp F6  &kp F7  &kp F8  &kp F9      &kp F10         &msc MOVE_Y(-SCRL_SPEED)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &msc MOVE_X(SCRL_SPEED)
+                &kp F6  &kp F7  &kp F8  &kp F9      &kp F10         &msc MOVE_Y(SCRL_SPEED)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &msc MOVE_X(SCRL_SPEED)
                                         &sys_reset  &trans          &trans                    &sys_reset
             >;
         };
