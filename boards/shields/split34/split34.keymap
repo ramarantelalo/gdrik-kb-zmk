@@ -3,6 +3,11 @@
 #include "zmk-helpers/helper.h"
 #include "split34-labels.h"
 
+#define DEF 0
+#define SYM 1
+#define NAV 2
+#define FKEYS 3
+
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
     tapping-term-ms = <225>;
@@ -28,20 +33,38 @@ ZMK_HOLD_TAP(hmr,
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = < 
+            bindings = <
                 &kp Q          &kp W          &kp E          &kp R          &kp T            &kp Y  &kp U          &kp I           &kp O           &kp P
-                &hml LGUI A    &hml LSHFT S   &hml LCTRL D   &lt 1 F        &hml LALT G      &hmr RALT H  &lt 1 J   &hmr RCTRL K    &hmr RSHFT L     &hmr RGUI ESC
+                &hml LGUI A    &hml LSHFT S   &hml LCTRL D   &lt SYM F      &hml LALT G      &hmr RALT H  &lt SYM J   &hmr RCTRL K    &hmr RSHFT L     &hmr RGUI ESC
                 &kp Z          &kp X          &kp C          &kp V          &kp B            &kp N  &kp M          &kp COMMA       &kp DOT         &kp TAB
-                                                              &studio_unlock &kp SPACE          &kp SPACE &none
+                                                              &studio_unlock &lt NAV SPACE          &lt NAV SPACE &none
             >;
         };
 
         sym_layer {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-                                                 &trans  &trans      &trans  &trans
+                &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp PIPE   &kp BSLH
+                &kp EQUAL  &kp LT     &kp LBRC   &kp LPAR   &kp LBKT       &kp GRAVE  &kp SEMI   &kp FSLH   &kp SQT    &kp MINUS
+                &kp PLUS   &kp GT     &kp RBRC   &kp RPAR   &kp RBKT       &kp TILDE  &kp COLON  &kp QMARK  &kp DQT    &kp UNDER
+                                                  &trans     &mo FKEYS         &mo FKEYS  &trans
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+                &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6      &kp N7  &kp N8  &kp N9  &kp N0
+                &trans  &trans  &trans  &trans  &trans      &kp LEFT    &kp DOWN &kp UP &kp RIGHT &kp ESC
+                &kp C_BRI_DEC &kp C_BRI_INC &kp F12 &kp C_VOL_DN &kp C_VOL_UP     &none  &kp F11  &trans  &trans  &trans
+                                            &trans  &trans      &trans  &trans
+            >;
+        };
+
+        fkeys_layer {
+            bindings = <
+                &kp F1  &kp F2  &kp F3  &kp F4  &kp F5           &kp LS(F17) &kp F13 &kp F15 &kp F14 &kp LS(F20)
+                &kp F6  &kp F7  &kp F8  &kp F9  &kp F10          &kp F17     &kp F18 &kp F19 &kp F20 &kp F16
+                &trans  &trans  &trans  &kp F16 &trans           &kp LS(F18) &kp F17 &kp F18 &kp F20 &kp LS(F19)
+                                        &trans  &trans               &trans  &trans
             >;
         };
     };
