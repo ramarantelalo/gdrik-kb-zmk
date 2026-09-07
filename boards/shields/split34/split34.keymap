@@ -46,6 +46,38 @@ ZMK_HOLD_TAP(hmr,
 )
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_bspc_left {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp BSPC>;
+            layers = <DEF>;
+        };
+
+        combo_bspc_right {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp BSPC>;
+            layers = <DEF>;
+        };
+
+        combo_ret_left {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp RET>;
+            layers = <DEF>;
+        };
+
+        combo_ret_right {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp RET>;
+            layers = <DEF>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
