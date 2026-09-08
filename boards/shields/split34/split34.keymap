@@ -76,6 +76,137 @@ ZMK_HOLD_TAP(hmr,
             bindings = <&kp RET>;
             layers = <DEF>;
         };
+
+        /* --- one-shot layers --- */
+        combo_osl_sym_left {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&sl SYM>;
+            layers = <DEF>;
+        };
+
+        combo_osl_sym_right {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&sl SYM>;
+            layers = <DEF>;
+        };
+
+        combo_osl_nav_left {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&sl NAV>;
+            layers = <DEF>;
+        };
+
+        combo_osl_nav_right {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&sl NAV>;
+            layers = <DEF>;
+        };
+
+        combo_osl_fkeys_left {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&sl FKEYS>;
+            layers = <DEF>;
+        };
+
+        combo_osl_fkeys_right {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&sl FKEYS>;
+            layers = <DEF>;
+        };
+
+        /* --- one-shot shift --- */
+        combo_osm_lshift {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&sk LSHFT>;
+            layers = <DEF>;
+        };
+
+        combo_osm_rshift {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&sk RSHFT>;
+            layers = <DEF>;
+        };
+
+        /* --- toggle layers --- */
+        combo_tog_sym_left {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&tog SYM>;
+            layers = <DEF SYM>;
+        };
+
+        combo_tog_sym_right {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&tog SYM>;
+            layers = <DEF SYM>;
+        };
+
+        combo_tog_nav_left {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&tog NAV>;
+            layers = <DEF NAV>;
+        };
+
+        combo_tog_nav_right {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&tog NAV>;
+            layers = <DEF NAV>;
+        };
+
+        combo_tog_fkeys_left {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&tog FKEYS>;
+            layers = <DEF FKEYS>;
+        };
+
+        combo_tog_fkeys_right {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&tog FKEYS>;
+            layers = <DEF FKEYS>;
+        };
+
+        /* --- toggle caps lock --- */
+        combo_capsword_left {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&caps_word>;
+            layers = <DEF>;
+        };
+
+        combo_capsword_right {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&caps_word>;
+            layers = <DEF>;
+        };
+
+        /* --- studio unlock --- */
+        combo_capsword_left {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&studio_unlock>;
+            layers = <DEF>;
+        };
+
+        combo_capsword_right {
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <&studio_unlock>;
+            layers = <DEF>;
+        };
     };
 
     keymap {
@@ -83,37 +214,37 @@ ZMK_HOLD_TAP(hmr,
 
         default_layer {
             bindings = <
-                &kp Q          &kp W          &kp E         &kp R           &kp T                 &kp Y           &kp U       &kp I         &kp O         &kp P
-                &hml LGUI A    &hml LSHFT S   &hml LCTRL D  &lt SYM F       &hml LALT G           &hmr RALT H     &lt SYM J   &hmr RCTRL K  &hmr RSHFT L  &hmr RGUI ESC
-                &kp Z          &kp X          &kp C         &kp V           &kp B                 &kp N           &kp M       &kp COMMA     &kp DOT       &kp TAB
-                                                            &studio_unlock  &lt NAV SPACE         &lt NAV SPACE   &none
+                &kp Q        &kp W         &kp E         &kp R      &kp T                 &kp Y          &kp U      &kp I         &kp O         &kp P
+                &hml LGUI A  &hml LSHFT S  &hml LCTRL D  &lt SYM F  &hml LALT G           &hmr RALT H    &lt SYM J  &hmr RCTRL K  &hmr RSHFT L  &hmr RGUI ESC
+                &kp Z        &kp X         &kp C         &kp V      &kp B                 &kp N          &kp M      &kp COMMA     &kp DOT       &kp TAB
+                                                         &none      &lt NAV SPACE         &lt NAV SPACE  &none
             >;
         };
 
         sym_layer {
             bindings = <
-                &kp EXCL   &kp AT   &kp HASH  &kp DLLR    &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp PIPE   &kp BSLH
-                &kp EQUAL  &kp LT   &kp LBRC  &kp LPAR    &kp LBKT       &kp GRAVE  &kp SEMI   &kp FSLH   &kp SQT    &kp MINUS
-                &kp PLUS   &kp GT   &kp RBRC  &kp RPAR    &kp RBKT       &kp TILDE  &kp COLON  &kp QMARK  &kp DQT    &kp UNDER
-                                              &bt BT_CLR  &mo FKEYS      &mo FKEYS  &bt BT_CLR
+                &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT             &kp CARET  &kp AMPS   &kp ASTRK  &kp PIPE  &kp BSLH
+                &kp EQUAL  &kp LT  &kp LBRC  &kp LPAR  &kp LBKT              &kp GRAVE  &kp SEMI   &kp FSLH   &kp SQT   &kp MINUS
+                &kp PLUS   &kp GT  &kp RBRC  &kp RPAR  &kp RBKT              &kp TILDE  &kp COLON  &kp QMARK  &kp DQT   &kp UNDER
+                                             &none     &mo FKEYS             &mo FKEYS  &none
             >;
         };
 
         nav_layer {
             bindings = <
-                &kp N1          &kp N2          &kp N3  &kp N4        &kp N5                &kp N6    &kp N7    &kp N8  &kp N9      &kp N0
-                &trans          &trans          &trans  &trans        &trans                &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT   &kp ESC
-                &kp C_BRI_DEC   &kp C_BRI_INC   &none   &kp C_VOL_DN  &kp C_VOL_UP          &kp F11   &kp F12   &trans  &trans      &trans
-                                                        &bootloader   &trans                &trans    &bootloader
+                &kp N1         &kp N2         &kp N3  &kp N4        &kp N5                &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
+                &trans         &trans         &trans  &trans        &trans                &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp ESC
+                &kp C_BRI_DEC  &kp C_BRI_INC  &none   &kp C_VOL_DN  &kp C_VOL_UP          &kp F11   &kp F12   &trans  &trans     &trans
+                                                      &none         &trans                &trans    &none
             >;
         };
 
         fkeys_layer {
             bindings = < 
-                &kp F1  &kp F2  &kp F3  &kp F4      &kp F5          &msc MOVE_Y(-SCRL_SPEED)  &mkp LCLK       &mkp MCLK       &mkp RCLK         &msc MOVE_X(-SCRL_SPEED)
-                &trans  &trans  &trans  &mkp LCLK   &trans          &mmv MOVE_LEFT            &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &mkp LCLK
-                &kp F6  &kp F7  &kp F8  &kp F9      &kp F10         &msc MOVE_Y(SCRL_SPEED)   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &msc MOVE_X(SCRL_SPEED)
-                                        &sys_reset  &trans          &trans                    &sys_reset
+                &kp F1  &kp F2  &kp F3  &kp F4     &kp F5                &msc MOVE_Y(-SCRL_SPEED)  &mkp LCLK       &mkp MCLK       &mkp RCLK        &msc MOVE_X(-SCRL_SPEED)
+                &trans  &trans  &trans  &mkp LCLK  &trans                &mmv MOVE_LEFT            &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &mkp LCLK
+                &kp F6  &kp F7  &kp F8  &kp F9     &kp F10               &msc MOVE_Y(SCRL_SPEED)   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_X(SCRL_SPEED)
+                                        &none      &trans                &trans                    &none
             >;
         };
     };
