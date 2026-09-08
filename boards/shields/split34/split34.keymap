@@ -194,14 +194,14 @@ ZMK_HOLD_TAP(hmr,
         };
 
         /* --- studio unlock --- */
-        combo_capsword_left {
+        combo_std_ul_left {
             timeout-ms = <50>;
             key-positions = <3 4>;
             bindings = <&studio_unlock>;
             layers = <DEF>;
         };
 
-        combo_capsword_right {
+        combo_std_ul_right {
             timeout-ms = <50>;
             key-positions = <5 6>;
             bindings = <&studio_unlock>;
