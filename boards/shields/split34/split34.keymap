@@ -46,19 +46,29 @@ ZMK_HOLD_TAP(hmr,
 )
 
 / {
+    behaviors {
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
         combo_bspc_left {
             timeout-ms = <50>;
-            key-positions = <2 3>;
+            key-positions = <22 23>;
             bindings = <&kp BSPC>;
             layers = <DEF>;
         };
 
         combo_bspc_right {
             timeout-ms = <50>;
-            key-positions = <6 7>;
+            key-positions = <26 27>;
             bindings = <&kp BSPC>;
             layers = <DEF>;
         };
@@ -94,28 +104,28 @@ ZMK_HOLD_TAP(hmr,
 
         combo_osl_nav_left {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <11 22>;
             bindings = <&sl NAV>;
             layers = <DEF>;
         };
 
         combo_osl_nav_right {
             timeout-ms = <50>;
-            key-positions = <7 8>;
+            key-positions = <27 18>;
             bindings = <&sl NAV>;
             layers = <DEF>;
         };
 
         combo_osl_fkeys_left {
             timeout-ms = <50>;
-            key-positions = <13 2>;
+            key-positions = <12 23>;
             bindings = <&sl FKEYS>;
             layers = <DEF>;
         };
 
         combo_osl_fkeys_right {
             timeout-ms = <50>;
-            key-positions = <16 7>;
+            key-positions = <17 26>;
             bindings = <&sl FKEYS>;
             layers = <DEF>;
         };
@@ -124,56 +134,56 @@ ZMK_HOLD_TAP(hmr,
         combo_osm_lshift {
             timeout-ms = <50>;
             key-positions = <11 12>;
-            bindings = <&sk LSHFT>;
+            bindings = <&skq LSHFT>;
             layers = <DEF>;
         };
 
         combo_osm_rshift {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            bindings = <&sk RSHFT>;
+            bindings = <&skq RSHFT>;
             layers = <DEF>;
         };
 
         /* --- toggle layers --- */
         combo_tog_sym_left {
             timeout-ms = <50>;
-            key-positions = <13 21>;
+            key-positions = <23 24>;
             bindings = <&tog SYM>;
             layers = <DEF SYM>;
         };
 
         combo_tog_sym_right {
             timeout-ms = <50>;
-            key-positions = <16 28>;
+            key-positions = <25 26>;
             bindings = <&tog SYM>;
             layers = <DEF SYM>;
         };
 
         combo_tog_nav_left {
             timeout-ms = <50>;
-            key-positions = <13 1>;
+            key-positions = <13 14>;
             bindings = <&tog NAV>;
             layers = <DEF NAV>;
         };
 
         combo_tog_nav_right {
             timeout-ms = <50>;
-            key-positions = <16 8>;
+            key-positions = <15 16>;
             bindings = <&tog NAV>;
             layers = <DEF NAV>;
         };
 
         combo_tog_fkeys_left {
             timeout-ms = <50>;
-            key-positions = <3 1>;
+            key-positions = <14 23>;
             bindings = <&tog FKEYS>;
             layers = <DEF FKEYS>;
         };
 
         combo_tog_fkeys_right {
             timeout-ms = <50>;
-            key-positions = <6 8>;
+            key-positions = <15 26>;
             bindings = <&tog FKEYS>;
             layers = <DEF FKEYS>;
         };
