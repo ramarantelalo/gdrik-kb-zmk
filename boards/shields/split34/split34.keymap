@@ -148,42 +148,42 @@ ZMK_HOLD_TAP(hmr,
         /* --- toggle layers --- */
         combo_tog_sym_left {
             timeout-ms = <50>;
-            key-positions = <23 24>;
+            key-positions = <33 10>;
             bindings = <&tog SYM>;
             layers = <DEF SYM>;
         };
 
         combo_tog_sym_right {
             timeout-ms = <50>;
-            key-positions = <25 26>;
+            key-positions = <36 19>;
             bindings = <&tog SYM>;
             layers = <DEF SYM>;
         };
 
         combo_tog_nav_left {
             timeout-ms = <50>;
-            key-positions = <13 14>;
+            key-positions = <33 0>;
             bindings = <&tog NAV>;
             layers = <DEF NAV>;
         };
 
         combo_tog_nav_right {
             timeout-ms = <50>;
-            key-positions = <15 16>;
+            key-positions = <36 9>;
             bindings = <&tog NAV>;
             layers = <DEF NAV>;
         };
 
         combo_tog_fkeys_left {
             timeout-ms = <50>;
-            key-positions = <14 23>;
+            key-positions = <33 20>;
             bindings = <&tog FKEYS>;
             layers = <DEF FKEYS>;
         };
 
         combo_tog_fkeys_right {
             timeout-ms = <50>;
-            key-positions = <15 26>;
+            key-positions = <36 29>;
             bindings = <&tog FKEYS>;
             layers = <DEF FKEYS>;
         };
