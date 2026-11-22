@@ -233,10 +233,10 @@ ZMK_HOLD_TAP(hmr,
 
         sym_layer {
             bindings = <
-                &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT             &kp CARET  &kp AMPS   &kp ASTRK  &kp PIPE  &kp BSLH
-                &kp EQUAL  &kp LT  &kp LBRC  &kp LPAR  &kp LBKT              &kp GRAVE  &kp SEMI   &kp FSLH   &kp SQT   &kp MINUS
-                &kp PLUS   &kp GT  &kp RBRC  &kp RPAR  &kp RBKT              &kp TILDE  &kp COLON  &kp QMARK  &kp DQT   &kp UNDER
-                                             &none     &mo FKEYS             &mo FKEYS  &none
+                &kp EXCL   &kp AT  &kp HASH  &kp DLLR   &kp PRCNT             &kp CARET  &kp AMPS   &kp ASTRK  &kp PIPE  &kp BSLH
+                &kp EQUAL  &kp LT  &kp LBRC  &kp LPAR   &kp LBKT              &kp GRAVE  &kp SEMI   &kp FSLH   &kp SQT   &kp MINUS
+                &kp PLUS   &kp GT  &kp RBRC  &kp RPAR   &kp RBKT              &kp TILDE  &kp COLON  &kp QMARK  &kp DQT   &kp UNDER
+                                             &bt BT_CLR &mo FKEYS             &mo FKEYS  &bt BT_CLR
             >;
         };
 
