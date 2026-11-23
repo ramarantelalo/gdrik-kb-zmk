@@ -257,5 +257,9 @@ ZMK_HOLD_TAP(hmr,
                                         &none      &trans                &trans                    &none
             >;
         };
+
+        extra1 {
+            status = "reserved";
+        };
     };
 };
